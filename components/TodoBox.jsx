@@ -68,7 +68,6 @@ const TodoBox = ({ todo }) => {
       shadow={"dark-lg"}
       transition="0.2s"
       _hover={{ boxShadow: "sm" }}
-      onClick={() => setEditable(true)}
     >
       {editable ? (
         <>
@@ -147,7 +146,7 @@ const TodoBox = ({ todo }) => {
               {todo.status}
             </Badge>
           </Heading>
-          <Text>{todo.description}</Text>
+          <Text onClick={() => setEditable(true)}>{todo.description}</Text>
         </>
       )}
     </Box>
